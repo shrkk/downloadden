@@ -22,5 +22,45 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Glassmorphism card style */
+.glass-card {
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.glass-card-dark {
+  background: rgba(20, 20, 20, 0.30);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+}
+
+.glass-card .glass-title {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--foreground);
+}
+
+.glass-card .glass-subtitle {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--foreground);
+  opacity: 0.8;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
